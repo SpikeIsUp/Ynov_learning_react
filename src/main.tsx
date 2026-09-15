@@ -4,9 +4,9 @@ import { createBrowserRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import App from './App.tsx';
 import Header from './components/Header';
+import User from './components/User.tsx';
 import './index.css';
 import UserList from './pages/UserList.tsx';
-import User from './components/User.tsx';
 
 const Layout = () => (
   <>

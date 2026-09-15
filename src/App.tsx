@@ -1,27 +1,22 @@
-import { useState } from 'react';
 import './App.css';
-import HelloWorld from './components/HelloWorld';
+import recipes from './json/recipes.json';
 
 function App() {
-  let isValid: boolean = true;
-  const [count, setCount] = useState<number>(0);
 
   return (
     <>
       <section id="center">
         <div>
-          {isValid && <HelloWorld name="Ytasty Crousty"/>}
-          {
-            count > 3 ?
-              <div>Important things</div>
-              :
-              <div>Sile things</div>
-          }
-          {
-            ["Sirine", "Quentin", "Dina", "Thomas"]
-              .map((el) => <HelloWorld name={el} />)
-          }
-          <button onClick={() => setCount(count +  1)}>{count}</button>
+          <p>Nom Prenom</p>
+          <div className="galerie">
+          {recipes.recipes.map((recipe) =>
+            <div>
+              <p>titre: {recipe.name}</p>
+              <p>temps de préparation: {recipe.cookTimeMinutes}</p>
+              <img src={recipe.image} alt="image de la recette" />
+            </div>
+          )}
+          </div>
         </div>
       </section>
     </>
