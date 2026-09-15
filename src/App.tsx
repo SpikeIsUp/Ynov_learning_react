@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './App.css';
 import recipes from './json/recipes.json';
 
@@ -13,6 +14,7 @@ function App() {
             <div>
               <p>titre: {recipe.name}</p>
               <p>temps de préparation: {recipe.cookTimeMinutes}</p>
+              <Link to={`/recipe/${recipe.name}`}> Choisir</Link>
               <img src={recipe.image} alt="image de la recette" />
             </div>
           )}
