@@ -4,8 +4,10 @@ import { createBrowserRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import App from './App.tsx';
 import Header from './components/Header';
+import Recipe from './components/Recipe.tsx';
 import User from './components/User.tsx';
 import './index.css';
+import Connexion from './pages/Connexion.tsx';
 import UserList from './pages/UserList.tsx';
 
 const Layout = () => (
@@ -28,8 +30,16 @@ const router = createBrowserRouter([
       element: <UserList/>,
     },
     {
-      path: "/user/:username",
+      path: "/user/:id",
       element: <User/>,
+    },
+    {
+      path: "/:id",
+      element: <Recipe/>,
+    },
+    {
+      path: "/connexion",
+      element: <Connexion/>,
     }
   ]
   }

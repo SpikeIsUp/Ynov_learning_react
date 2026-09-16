@@ -11,7 +11,7 @@ function UserList() {
       <div>
         <img src={user.image} alt="image de l'utilisateur" />
         <p>pseudo: {user.username}</p>
-        <Link to={`/user/${user.firstName}`}> go to user</Link>
+        <Link to={`/user/${user.id}`}> go to user</Link>
       </div>
     )}
     </div>
